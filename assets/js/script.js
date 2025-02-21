@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.getElementById("welcome-header");
-    header.style.opacity = "0"; // Start hidden
 
+    // Set initial position (lower on the page)
+    header.style.transform = "translateY(50px)";
+    header.style.opacity = "0";
+
+    // Animate to the top after a short delay
     setTimeout(() => {
-        header.style.transition = "opacity 1.5s ease-in-out";
-        header.style.opacity = "1"; // Fade in after 500ms
+        header.style.transition = "transform 1.5s ease-out, opacity 1.5s ease-out";
+        header.style.transform = "translateY(0)"; // Move to the top
+        header.style.opacity = "1";
     }, 500);
 });
