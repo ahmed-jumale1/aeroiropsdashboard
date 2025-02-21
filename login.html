@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/css/style.css"> <!-- Adjust this path if needed -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-
 <body>
 
-    <h1>Login to Aero IROPS Dashboard</h1>
+    <div class="login-container">
+        <h1 class="header-title">Login to Aero IROPS Dashboard</h1>
 
-    <!-- Existing Google Login Button (Replace "google-login-btn" with your actual button ID) -->
-    <button id="google-login-btn">Sign in with Google</button>
+        <!-- Custom Google Sign-In Button -->
+        <div class="google-button">
+            <img src="assets/images/google-signin.svg" alt="Sign in with Google" id="google-login-btn">
+        </div>
+    </div>
 
     <script>
         function handleCredentialResponse(response) {
             console.log("Encoded JWT ID token: " + response.credential);
-
-            // Store the token in local storage
             localStorage.setItem("google_token", response.credential);
-
-            // Redirect to index.html
             window.location.href = "index.html";
         }
 
@@ -32,8 +31,9 @@
                 callback: handleCredentialResponse
             });
 
+            // Attach event listener to your custom button
             document.getElementById("google-login-btn").addEventListener("click", function () {
-                google.accounts.id.prompt(); // Trigger Google Sign-In popup
+                google.accounts.id.prompt(); // Triggers the Google login popup
             });
         };
     </script>
