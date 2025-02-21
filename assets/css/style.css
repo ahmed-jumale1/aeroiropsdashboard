@@ -31,7 +31,7 @@ body {
     text-align: center;
 }
 
-/* Bigger Dashboard Title */
+/* Updated Header */
 .header-title {
     font-size: 48px; /* Increased from 32px */
     font-weight: bold;
@@ -39,31 +39,16 @@ body {
     letter-spacing: 1px;
 }
 
-/* Google Login Button */
+/* Remove Blue Background Around Google Button */
 #google-login-btn {
-    background-color: #4285F4;
-    color: white;
+    background: none;
     border: none;
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 0;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    width: 240px; /* Ensure correct size */
 }
 
+/* Hover effect for Google button */
 #google-login-btn:hover {
-    background-color: #357ae8;
-}
-
-/* Style for Google Sign-In Image Button */
-.google-button img {
-    width: 240px; /* Adjust button size */
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.google-button img:hover {
     opacity: 0.8;
 }
