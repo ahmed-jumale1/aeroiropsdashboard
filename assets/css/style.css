@@ -1,4 +1,4 @@
-/* Background */
+/* General Styles */
 body {
     background-color: #1a1a1a;
     color: white;
@@ -19,53 +19,18 @@ body {
 }
 
 .logo {
-    width: 120px; /* Slightly bigger logo */
+    width: 140px;
 }
 
-/* Centered Login Section */
-.login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Updated Header */
+/* Header Animation */
 .header-title {
     font-size: 48px;
     font-weight: bold;
     letter-spacing: 1px;
-    text-align: center; /* Keep it centered */
-    opacity: 0; /* Start hidden */
-    position: absolute; /* Allow movement */
-    left: 50%; /* Center horizontally */
-    top: 50%; /* Start from middle */
-    transform: translate(-50%, -50%); /* Perfect center alignment */
-}
-
-
-
-/* Remove Blue Background Around Google Button */
-#google-login-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    width: 240px; /* Ensure correct size */
-}
-
-/* Italic Labels */
-.irops-table em {
-    font-style: italic;
-    color: #ccc;
-    display: block;
-    margin-top: 5px;
-}
-
-
-
-/* Hover effect for Google button */
-#google-login-btn:hover {
-    opacity: 0.8;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
