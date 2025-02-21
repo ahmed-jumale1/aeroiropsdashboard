@@ -35,15 +35,15 @@ body {
 .header-title {
     font-size: 48px;
     font-weight: bold;
-    margin-bottom: 25px;
     letter-spacing: 1px;
-    text-align: left; /* Align left if needed */
+    text-align: center; /* Keep it centered */
     opacity: 0; /* Start hidden */
-    position: absolute; /* Make it stick to the top */
-    left: 20px; /* Move it towards the left (adjust if needed) */
-    top: 50%; /* Start in the center */
-    transform: translateY(-50%); /* Adjust to center initially */
+    position: absolute; /* Allow movement */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Start from middle */
+    transform: translate(-50%, -50%); /* Perfect center alignment */
 }
+
 
 
 /* Remove Blue Background Around Google Button */
