@@ -1,0 +1,97 @@
+/* Background */
+body {
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Aero Logo - Positioned at Top Left */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* Fixed Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Dashboard Title */
+.header-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Table Container (Centered & Fixed Width) */
+.table-container {
+    max-width: 1000px;
+    margin: 100px auto 50px;
+    padding: 20px;
+}
+
+/* Table Styles */
+.table-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f2f2f2;
+    font-weight: 600;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
+/* Action Link */
+td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Page-Specific Styles */
+.dashboard-page .logo-container {
+    display: block;
+}
+
+.login-page .logo-container {
+    display: none; /* Hide logo on login page */
+}
