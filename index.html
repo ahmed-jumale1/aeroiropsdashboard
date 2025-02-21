@@ -6,102 +6,93 @@
     <title>IROPS Dashboard</title>
     <style>
         body {
-            background-color: #121212;
+            background-color: #1a1a1a;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding-top: 50px;
+            height: auto;
         }
         .dashboard {
             max-width: 1000px;
-            margin: auto;
+            width: 90%;
         }
-        .header {
-            font-size: 32px;
+        .header-title {
+            font-size: 36px;
             font-weight: bold;
-            margin-bottom: 20px;
+            text-align: center;
+            opacity: 1;
         }
         .grid-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
+            margin-top: 20px;
         }
         .card {
-            background: #1e1e1e;
-            padding: 15px;
+            background: #333;
+            padding: 20px;
             border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
             text-align: left;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
         .card h2 {
             font-size: 18px;
-            margin-bottom: 10px;
             color: #f0a500;
         }
         .card p, .card select, .card input {
-            background: #2a2a2a;
+            background: #444;
             color: white;
-            padding: 8px;
+            padding: 10px;
             border-radius: 5px;
             width: 100%;
             border: none;
             margin-bottom: 10px;
         }
-        .card select:hover, .card input:hover {
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <div class="dashboard">
-        <div class="header">IROPS Dashboard</div>
+        <div class="header-title">IROPS Dashboard</div>
         
         <div class="grid-container">
             <div class="card">
                 <h2>IROPS Overview</h2>
-                <p>Date: <input type="date"></p>
-                <p>IROPS ID: <input type="text"></p>
-                <p>IROPS Reason: <input type="text"></p>
+                <p>Date:
+                    <select id="date-select"></select>
+                </p>
+                <p>IROPS ID: <input type="text" id="irops-id"></p>
+                <p>IROPS Reason: <input type="text" id="irops-reason"></p>
             </div>
             <div class="card">
                 <h2>IROPS Type</h2>
-                <select>
+                <select id="irops-type">
                     <option>Re-Dispatch</option>
                     <option>Weather Delay</option>
                     <option>Technical Issue</option>
                     <option>Crew Duty Time</option>
                 </select>
             </div>
-            <div class="card">
-                <h2>Guest Impact</h2>
-                <p>No. Guests Affected: <input type="number"></p>
-                <p>Guest Notification Status: <input type="text"></p>
-                <p>Guest Communication: <input type="text"></p>
-            </div>
-            <div class="card">
-                <h2>Flight Details</h2>
-                <p>Flight Number(s): <input type="text"></p>
-                <p>Old ETD/ETA: <input type="text"></p>
-                <p>New ETD/ETA: <input type="text"></p>
-                <p>Tail Number(s): <input type="text"></p>
-                <p>Aircraft Type: <input type="text"></p>
-            </div>
-            <div class="card">
-                <h2>Shuttle Information</h2>
-                <p>Shuttle A Timing(s): <input type="text"></p>
-                <p>Pick-up Points: <input type="text"></p>
-                <p>Shuttle B Timing(s): <input type="text"></p>
-                <p>Pick-up Points: <input type="text"></p>
-            </div>
-            <div class="card">
-                <h2>Team Action Items</h2>
-                <p>OCM Actions: <input type="text"></p>
-                <p>OCC Actions: <input type="text"></p>
-                <p>Maintenance Actions: <input type="text"></p>
-                <p>Experience/Concierge Actions: <input type="text"></p>
-            </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Populate Date Dropdown
+            const dateSelect = document.getElementById("date-select");
+            const today = new Date();
+            for (let i = 0; i < 7; i++) {
+                let date = new Date();
+                date.setDate(today.getDate() + i);
+                let formattedDate = (date.getMonth() + 1) + "/" + date.getDate();
+                let option = document.createElement("option");
+                option.textContent = formattedDate;
+                dateSelect.appendChild(option);
+            }
+        });
+    </script>
 </body>
 </html>
