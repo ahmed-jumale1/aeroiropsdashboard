@@ -1,10 +1,9 @@
-// Select all delete buttons
-const deleteButtons = document.querySelectorAll(".delete-btn");
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("welcome-header");
+    header.style.opacity = "0"; // Start hidden
 
-// Add event listener to each button
-deleteButtons.forEach(button => {
-    button.addEventListener("click", function() {
-        const row = this.parentElement.parentElement;
-        row.remove(); // Remove the row from the table
-    });
+    setTimeout(() => {
+        header.style.transition = "opacity 1.5s ease-in-out";
+        header.style.opacity = "1"; // Fade in after 500ms
+    }, 500);
 });
