@@ -54,45 +54,60 @@ body {
     cursor: pointer;
     width: 240px; /* Ensure correct size */
 }
-.irops-container {
-    width: 80%;
+.irops-dashboard {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
+/* Left & Right Columns */
+.irops-column {
+    width: 48%; /* Each column takes up almost half */
+}
+
+/* Styling the Table */
 .irops-table {
     width: 100%;
     border-collapse: collapse;
     background: black;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
 }
 
+/* Table Headers */
 .irops-table th {
-    background: #808080; /* Dark gray header */
-    padding: 10px;
+    background: #808080; /* Dark gray */
+    padding: 12px;
     text-align: left;
 }
 
+/* Table Cells */
 .irops-table td {
-    background: #333333; /* Lighter gray cells */
+    background: #333333; /* Lighter gray */
     padding: 10px;
     border: 1px solid #555;
 }
 
+/* Select Dropdown */
 .irops-table select {
     width: 100%;
-    padding: 5px;
+    padding: 6px;
     background: #222;
     color: white;
     border: none;
     font-size: 16px;
 }
 
+/* Italic Labels */
 .irops-table em {
     font-style: italic;
     color: #ccc;
+    display: block;
+    margin-top: 5px;
 }
+
 
 
 /* Hover effect for Google button */
