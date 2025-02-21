@@ -16,54 +16,61 @@
         <img src="assets/images/aero-logo.svg" alt="Aero Logo" class="logo">
     </div>
 
-    <div class="irops-container">
-    <table class="irops-table">
-        <tr>
-            <th colspan="2">IROPS Overview</th>
-            <th>IROPS Type</th>
-        </tr>
-        <tr>
-            <td>Date</td>
-            <td></td>
-            <td rowspan="3">
-                <select>
-                    <option>Re-Dispatch</option>
-                    <option>Weather</option>
-                    <option>Maintenance</option>
-                    <option>Other</option>
-                </select>
-            </td>
-        </tr>
-        <tr><td>IROPS ID</td><td></td></tr>
-        <tr><td>IROPS Reason</td><td></td></tr>
+    <div class="irops-dashboard">
+    <!-- Left Column -->
+    <div class="irops-column">
+        <table class="irops-table">
+            <tr><th colspan="2">IROPS Overview</th></tr>
+            <tr><td>Date</td><td></td></tr>
+            <tr><td>IROPS ID</td><td></td></tr>
+            <tr><td>IROPS Reason</td><td></td></tr>
 
-        <tr><th colspan="3">Guest Impact</th></tr>
-        <tr><td>No. Guests Affected</td><td colspan="2"></td></tr>
-        <tr><td>Guest Notification Status</td><td colspan="2"></td></tr>
-        <tr><td>Guest Communication</td><td colspan="2"></td></tr>
+            <tr><th colspan="2">Guest Impact</th></tr>
+            <tr><td>No. Guests Affected</td><td></td></tr>
+            <tr><td>Guest Notification Status</td><td></td></tr>
+            <tr><td>Guest Communication</td><td></td></tr>
 
-        <tr><th colspan="3">Shuttle Information</th></tr>
-        <tr><td colspan="3"><em>Shuttle A</em></td></tr>
-        <tr><td>Shuttle Timing(s)</td><td colspan="2"></td></tr>
-        <tr><td>Pick-up Points</td><td colspan="2"></td></tr>
-        <tr><td colspan="3"><em>Shuttle B</em></td></tr>
-        <tr><td>Shuttle Timing(s)</td><td colspan="2"></td></tr>
-        <tr><td>Pick-up Points</td><td colspan="2"></td></tr>
+            <tr><th colspan="2">Shuttle Information</th></tr>
+            <tr><td colspan="2"><em>Shuttle A</em></td></tr>
+            <tr><td>Shuttle Timing(s)</td><td></td></tr>
+            <tr><td>Pick-up Points</td><td></td></tr>
+            <tr><td colspan="2"><em>Shuttle B</em></td></tr>
+            <tr><td>Shuttle Timing(s)</td><td></td></tr>
+            <tr><td>Pick-up Points</td><td></td></tr>
+        </table>
+    </div>
 
-        <tr><th colspan="3">Flight Details</th></tr>
-        <tr><td>Flight Number(s)</td><td colspan="2"></td></tr>
-        <tr><td>Old ETD/ETA</td><td colspan="2"></td></tr>
-        <tr><td>New ETD/ETA</td><td colspan="2"></td></tr>
-        <tr><td>Tail Number(s)</td><td colspan="2"></td></tr>
-        <tr><td>Aircraft Type</td><td colspan="2"></td></tr>
+    <!-- Right Column -->
+    <div class="irops-column">
+        <table class="irops-table">
+            <tr><th>IROPS Type</th></tr>
+            <tr>
+                <td>
+                    <select>
+                        <option>Re-Dispatch</option>
+                        <option>Weather</option>
+                        <option>Maintenance</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+            </tr>
 
-        <tr><th colspan="3">Team Action Items</th></tr>
-        <tr><td>OCM Actions</td><td colspan="2"></td></tr>
-        <tr><td>OCC Actions</td><td colspan="2"></td></tr>
-        <tr><td>Maintenance Actions</td><td colspan="2"></td></tr>
-        <tr><td>Experience/Concierge Actions</td><td colspan="2"></td></tr>
-    </table>
+            <tr><th>Flight Details</th></tr>
+            <tr><td>Flight Number(s)</td></tr>
+            <tr><td>Old ETD/ETA</td></tr>
+            <tr><td>New ETD/ETA</td></tr>
+            <tr><td>Tail Number(s)</td></tr>
+            <tr><td>Aircraft Type</td></tr>
+
+            <tr><th>Team Action Items</th></tr>
+            <tr><td>OCM Actions</td></tr>
+            <tr><td>OCC Actions</td></tr>
+            <tr><td>Maintenance Actions</td></tr>
+            <tr><td>Experience/Concierge Actions</td></tr>
+        </table>
+    </div>
 </div>
+
 
 
     <script>
