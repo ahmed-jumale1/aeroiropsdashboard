@@ -1,32 +1,70 @@
-/* Dashboard Box Container */
+/* 1. BODY & GENERAL */
+body {
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* So we don't see scrollbars if the header moves off-screen */
+}
+
+/* 2. LOGO CONTAINER */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.logo {
+    width: 140px;
+}
+
+/* 3. ANIMATED HEADER */
+.header-title {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0;               /* Start invisible */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 4. DASHBOARD CONTAINER */
 .dashboard-container {
+    position: absolute;
+    bottom: 50px; /* So the boxes appear near the bottom */
+    left: 50%;
+    transform: translateX(-50%);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     width: 80%;
-    margin: 40px auto;
+    max-width: 800px;
     text-align: center;
 }
 
-/* Individual Dashboard Box */
+/* 5. DASHBOARD BOXES */
 .dashboard-box {
     background: #333;
     color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
     transition: transform 0.2s ease-in-out;
 }
-
 .dashboard-box:hover {
     transform: translateY(-5px);
 }
-
 .dashboard-box h3 {
     font-size: 18px;
     margin-bottom: 5px;
 }
-
 .dashboard-box p {
     font-size: 14px;
     color: #bbb;
