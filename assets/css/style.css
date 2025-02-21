@@ -39,7 +39,25 @@ body {
     letter-spacing: 1px;
 }
 
-/* Style the Google Button */
+/* Google Login Button */
+#google-login-btn {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#google-login-btn:hover {
+    background-color: #357ae8;
+}
+
+/* Style for Google Sign-In Image Button */
 .google-button img {
     width: 240px; /* Adjust button size */
     cursor: pointer;
