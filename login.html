@@ -30,9 +30,10 @@
 
     window.onload = function () {
         google.accounts.id.initialize({
-            client_id: "313489044900-060ttoc66cc5cu4dtq7tbrfgilg6os2l.apps.googleusercontent.com", // Ensure this is correct
-            callback: handleCredentialResponse
-        });
+    client_id: "313489044900-060ttoc66cc5cu4dtq7tbrfgilg6os2l.apps.googleusercontent.com",
+    callback: handleCredentialResponse
+});
+
 
         // Attach event listener to custom button
         document.getElementById("google-login-btn").addEventListener("click", function () {
