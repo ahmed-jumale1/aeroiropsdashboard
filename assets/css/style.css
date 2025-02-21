@@ -55,50 +55,62 @@ body {
     width: 240px; /* Ensure correct size */
 }
 .irops-dashboard {
-    display: flex;
-    justify-content: space-between;
     width: 90%;
     margin: auto;
     margin-top: 30px;
 }
 
-/* Left & Right Columns */
-.irops-column {
-    width: 48%; /* Each column takes up almost half */
-}
-
-/* Styling the Table */
 .irops-table {
     width: 100%;
     border-collapse: collapse;
     background: black;
     color: white;
-    font-size: 18px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
 }
 
-/* Table Headers */
-.irops-table th {
+/* Section Headers */
+.irops-table .section-header {
     background: #808080; /* Dark gray */
-    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+    padding: 6px;
+}
+
+/* Sub-Headers (Shuttle A/B) */
+.irops-table .sub-header {
+    background: #b7b7b7; /* Light gray */
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    padding: 4px;
+}
+
+/* Labels for table rows */
+.irops-table .label {
+    background: #cccccc; /* Slightly lighter gray */
+    font-weight: bold;
+    padding: 6px;
     text-align: left;
 }
 
-/* Table Cells */
+/* Empty cells */
 .irops-table td {
-    background: #333333; /* Lighter gray */
-    padding: 10px;
+    background: #333333; /* Darker gray for empty fields */
+    padding: 6px;
     border: 1px solid #555;
 }
 
-/* Select Dropdown */
+/* Dropdown Styling */
 .irops-table select {
     width: 100%;
-    padding: 6px;
+    padding: 5px;
     background: #222;
     color: white;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
 }
+
 
 /* Italic Labels */
 .irops-table em {
