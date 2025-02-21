@@ -1,40 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aero IROPS Dashboard</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IROPS Dashboard</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .dashboard {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .header {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .card {
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #f0a500;
+        }
+        .card p, .card select, .card input {
+            background: #2a2a2a;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            width: 100%;
+            border: none;
+            margin-bottom: 10px;
+        }
+        .card select:hover, .card input:hover {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <!-- Logo -->
-  <div class="logo-container">
-    <img src="assets/images/aerologo.svg" alt="Aero Logo" class="logo">
-  </div>
-
-  <!-- Animated Header -->
-  <h1 class="header-title" id="welcome-header">IROPS Dashboard</h1>
-
-  <!-- Dashboard Container -->
-  <div class="dashboard-container">
-    <div class="dashboard-box">
-      <h3>Active IROPS</h3>
-      <p>4 ongoing disruptions</p>
+    <div class="dashboard">
+        <div class="header">IROPS Dashboard</div>
+        
+        <div class="grid-container">
+            <div class="card">
+                <h2>IROPS Overview</h2>
+                <p>Date: <input type="date"></p>
+                <p>IROPS ID: <input type="text"></p>
+                <p>IROPS Reason: <input type="text"></p>
+            </div>
+            <div class="card">
+                <h2>IROPS Type</h2>
+                <select>
+                    <option>Re-Dispatch</option>
+                    <option>Weather Delay</option>
+                    <option>Technical Issue</option>
+                    <option>Crew Duty Time</option>
+                </select>
+            </div>
+            <div class="card">
+                <h2>Guest Impact</h2>
+                <p>No. Guests Affected: <input type="number"></p>
+                <p>Guest Notification Status: <input type="text"></p>
+                <p>Guest Communication: <input type="text"></p>
+            </div>
+            <div class="card">
+                <h2>Flight Details</h2>
+                <p>Flight Number(s): <input type="text"></p>
+                <p>Old ETD/ETA: <input type="text"></p>
+                <p>New ETD/ETA: <input type="text"></p>
+                <p>Tail Number(s): <input type="text"></p>
+                <p>Aircraft Type: <input type="text"></p>
+            </div>
+            <div class="card">
+                <h2>Shuttle Information</h2>
+                <p>Shuttle A Timing(s): <input type="text"></p>
+                <p>Pick-up Points: <input type="text"></p>
+                <p>Shuttle B Timing(s): <input type="text"></p>
+                <p>Pick-up Points: <input type="text"></p>
+            </div>
+            <div class="card">
+                <h2>Team Action Items</h2>
+                <p>OCM Actions: <input type="text"></p>
+                <p>OCC Actions: <input type="text"></p>
+                <p>Maintenance Actions: <input type="text"></p>
+                <p>Experience/Concierge Actions: <input type="text"></p>
+            </div>
+        </div>
     </div>
-    <div class="dashboard-box">
-      <h3>Resolved Cases</h3>
-      <p>23 closed IROPS</p>
-    </div>
-    <div class="dashboard-box">
-      <h3>Delayed Flights</h3>
-      <p>2 flights impacted</p>
-    </div>
-    <div class="dashboard-box">
-      <h3>Shuttle Coordination</h3>
-      <p>5 active shuttles</p>
-    </div>
-  </div>
-
-  <script src="assets/js/script.js" defer></script>
 </body>
 </html>
