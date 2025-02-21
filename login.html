@@ -22,24 +22,25 @@
     </div>
 
     <script>
-        function handleCredentialResponse(response) {
-            console.log("Encoded JWT ID token: " + response.credential);
-            localStorage.setItem("google_token", response.credential);
-            window.location.href = "index.html";
-        }
+    function handleCredentialResponse(response) {
+        console.log("Encoded JWT ID token: " + response.credential);
+        localStorage.setItem("google_token", response.credential);
+        window.location.href = "index.html";
+    }
 
-        window.onload = function () {
-            google.accounts.id.initialize({
-                client_id: "313489044900-060ttoc66cc5cu4dtq7tbrfgilg6os2l.apps.googleusercontent.com",
-                callback: handleCredentialResponse
-            });
+    window.onload = function () {
+        google.accounts.id.initialize({
+            client_id: "313489044900-060ttoc66cc5cu4dtq7tbrfgilg6os2l.apps.googleusercontent.com", // Ensure this is correct
+            callback: handleCredentialResponse
+        });
 
-            // Attach event listener to your custom button
-            document.getElementById("google-login-btn").addEventListener("click", function () {
-                google.accounts.id.prompt(); // Triggers the Google login popup
-            });
-        };
-    </script>
+        // Attach event listener to custom button
+        document.getElementById("google-login-btn").addEventListener("click", function () {
+            google.accounts.id.prompt(); // Triggers the Google login popup
+        });
+    };
+</script>
+
 
 </body>
 </html>
