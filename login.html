@@ -39,5 +39,26 @@
      data-logo_alignment="left">
 </div>
 
+    <script>
+  function handleCredentialResponse(response) {
+      console.log("Encoded JWT ID token: " + response.credential);
+      // Store the token in local storage (or session storage)
+      localStorage.setItem("google_token", response.credential);
+      // Redirect to index.html
+      window.location.href = "index.html";
+  }
+
+  window.onload = function () {
+      google.accounts.id.initialize({
+          client_id: "YOUR_GOOGLE_CLIENT_ID",
+          callback: handleCredentialResponse
+      });
+      google.accounts.id.renderButton(
+          document.getElementById("g_id_signin"),
+          { theme: "outline", size: "large" }
+      );
+  };
+</script>
+
 </body>
 </html>
