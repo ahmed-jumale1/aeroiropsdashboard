@@ -54,6 +54,46 @@ body {
     cursor: pointer;
     width: 240px; /* Ensure correct size */
 }
+.irops-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.irops-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: black;
+    color: white;
+    font-size: 16px;
+}
+
+.irops-table th {
+    background: #808080; /* Dark gray header */
+    padding: 10px;
+    text-align: left;
+}
+
+.irops-table td {
+    background: #333333; /* Lighter gray cells */
+    padding: 10px;
+    border: 1px solid #555;
+}
+
+.irops-table select {
+    width: 100%;
+    padding: 5px;
+    background: #222;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+.irops-table em {
+    font-style: italic;
+    color: #ccc;
+}
+
 
 /* Hover effect for Google button */
 #google-login-btn:hover {
