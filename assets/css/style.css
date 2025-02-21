@@ -54,63 +54,6 @@ body {
     cursor: pointer;
     width: 240px; /* Ensure correct size */
 }
-.irops-dashboard {
-    width: 90%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.irops-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: black;
-    color: white;
-    font-size: 12px;
-    font-family: Arial, sans-serif;
-}
-
-/* Section Headers */
-.irops-table .section-header {
-    background: #808080; /* Dark gray */
-    font-weight: bold;
-    text-align: left;
-    padding: 6px;
-}
-
-/* Sub-Headers (Shuttle A/B) */
-.irops-table .sub-header {
-    background: #b7b7b7; /* Light gray */
-    font-weight: bold;
-    font-style: italic;
-    text-align: left;
-    padding: 4px;
-}
-
-/* Labels for table rows */
-.irops-table .label {
-    background: #cccccc; /* Slightly lighter gray */
-    font-weight: bold;
-    padding: 6px;
-    text-align: left;
-}
-
-/* Empty cells */
-.irops-table td {
-    background: #333333; /* Darker gray for empty fields */
-    padding: 6px;
-    border: 1px solid #555;
-}
-
-/* Dropdown Styling */
-.irops-table select {
-    width: 100%;
-    padding: 5px;
-    background: #222;
-    color: white;
-    border: none;
-    font-size: 12px;
-}
-
 
 /* Italic Labels */
 .irops-table em {
